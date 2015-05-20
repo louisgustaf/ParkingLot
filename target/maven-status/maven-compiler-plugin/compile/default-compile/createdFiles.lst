@@ -1,0 +1,15 @@
+com\parking\model\Entrance.class
+com\parking\model\Vehicle.class
+com\parking\service\ParkingLotService.class
+com\parking\exception\ParkingLotException.class
+com\parking\exception\VehicleNotFoundException.class
+com\parking\model\Exit.class
+com\parking\service\PakingLotServiceImpl.class
+com\parking\exception\ParkingLotFullException.class
+com\parking\model\Ticket.class
+com\parking\model\ParkingLotImpl.class
+com\parking\model\Ticket$Status.class
+com\parking\exception\HowCanItBeException.class
+com\parking\model\PayingHelper.class
+com\parking\model\ParkingLot.class
+com\parking\model\ParkingSpace.class

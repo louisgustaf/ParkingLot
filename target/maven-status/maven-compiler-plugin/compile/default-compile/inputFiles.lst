@@ -1,0 +1,14 @@
+C:\development\parkingLot\src\main\java\com\parking\model\ParkingSpace.java
+C:\development\parkingLot\src\main\java\com\parking\service\PakingLotServiceImpl.java
+C:\development\parkingLot\src\main\java\com\parking\exception\ParkingLotException.java
+C:\development\parkingLot\src\main\java\com\parking\service\ParkingLotService.java
+C:\development\parkingLot\src\main\java\com\parking\exception\VehicleNotFoundException.java
+C:\development\parkingLot\src\main\java\com\parking\model\ParkingLot.java
+C:\development\parkingLot\src\main\java\com\parking\model\Vehicle.java
+C:\development\parkingLot\src\main\java\com\parking\exception\HowCanItBeException.java
+C:\development\parkingLot\src\main\java\com\parking\model\Ticket.java
+C:\development\parkingLot\src\main\java\com\parking\model\Exit.java
+C:\development\parkingLot\src\main\java\com\parking\model\PayingHelper.java
+C:\development\parkingLot\src\main\java\com\parking\exception\ParkingLotFullException.java
+C:\development\parkingLot\src\main\java\com\parking\model\ParkingLotImpl.java
+C:\development\parkingLot\src\main\java\com\parking\model\Entrance.java

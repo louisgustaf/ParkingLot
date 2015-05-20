@@ -49,6 +49,10 @@ public class ParkingLotImpl implements ParkingLot{
 		}
 	}
 
+	/**
+	 * @param vehicle
+	 * @return boolean
+	 */
 	public boolean findParkingSpaceForVehicle(Vehicle vehicle) {
 		ParkingSpace parkingSpace = this.findParkingSpace();
 		parkingSpace.setVehicle(vehicle);
@@ -78,10 +82,18 @@ public class ParkingLotImpl implements ParkingLot{
 		return parkingSpace;
 	}
 
+	/**
+	 * @param vehicle
+	 * @param exitNumber
+	 * @throws VehicleNotFoundException
+	 */
 	public void removeVehicle(Vehicle vehicle, int exitNumber) throws VehicleNotFoundException {
 		removeVehicle(vehicle.getLicensePlate(), exitNumber);
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.parking.model.ParkingLot#removeVehicle(java.lang.String, int)
+	 */
 	@Override
 	public void removeVehicle(String licensePlate, int exitNumber) throws VehicleNotFoundException {
 		ParkingSpace parkingSpace = this.parkingSpaces.get(licensePlate);
@@ -98,6 +110,9 @@ public class ParkingLotImpl implements ParkingLot{
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see com.parking.model.ParkingLot#isFull()
+	 */
 	@Override
 	public boolean isFull() {
 		if(this.parkingSpaces.size() == this.capacity){
@@ -106,6 +121,9 @@ public class ParkingLotImpl implements ParkingLot{
 		return false;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.parking.model.ParkingLot#availableParkingSpaces()
+	 */
 	@Override
 	public int availableParkingSpaces() throws HowCanItBeException {
 		int availability = this.capacity - this.parkingSpaces.size();
@@ -138,6 +156,9 @@ public class ParkingLotImpl implements ParkingLot{
 		}
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.parking.model.ParkingLot#receiveVehicle(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 */
 	@Override
 	public void receiveVehicle(int entrance, String licensePlate, String color, String brand, String model) throws ParkingLotFullException{
 		
@@ -150,18 +171,30 @@ public class ParkingLotImpl implements ParkingLot{
 		addVechicleFromLine(vehicleEntrance);
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.parking.model.ParkingLot#countVehicles()
+	 */
 	public int countVehicles(){
 		return this.parkingSpaces.size();
 	}
 
+	/**
+	 * @return
+	 */
 	public double getHourlyRate() {
 		return hourlyRate;
 	}
 	
+	/**
+	 * @param ticket
+	 */
 	public void setParkingTicketToPaid(Ticket ticket) {
 		checkOutTicket(ticket.getVehicle().getLicensePlate());
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.parking.model.ParkingLot#checkOutTicket(java.lang.String)
+	 */
 	@Override
 	public void checkOutTicket(String licensePlate) {
 		ParkingSpace parkingSpace = this.parkingSpaces.get(licensePlate);
@@ -172,6 +205,9 @@ public class ParkingLotImpl implements ParkingLot{
 		return PayingHelper.calculePayingAmount(ticket, hourlyRate);
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.parking.model.ParkingLot#calculateAmountToPay(java.lang.String)
+	 */
 	@Override
 	public double calculateAmountToPay(String licensePlate) {
 		ParkingSpace parkingSpace = this.parkingSpaces.get(licensePlate);
